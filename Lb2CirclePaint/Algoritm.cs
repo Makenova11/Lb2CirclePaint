@@ -10,7 +10,7 @@ namespace Lb2CirclePaint
     static class Algoritm
     {
         //Рисование круга по методу брезенхема
-        public static void BrCircle(Graphics g, Color clr, int _x, int _y, int radius)
+        public static void BrCircle(Graphics g, Brush clr, int _x, int _y, int radius)
         {
             int x = 0, y = radius, gap = 0, delta = (2 - 2 * radius);
             while (y >= 0)
@@ -38,9 +38,9 @@ namespace Lb2CirclePaint
             }
         }
         //Метод, устанавливающий пиксел на форме с заданными цветом и прозрачностью
-        private static void PutPixel(Graphics g, Color col, int x, int y)
+        private static void PutPixel(Graphics g, Brush brush, int x, int y)
         {
-            g.FillRectangle(new SolidBrush(col), x, y, 1, 1);
+            g.FillRectangle(brush, x, y, 1, 1);
         }
     }
 }
