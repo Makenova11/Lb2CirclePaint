@@ -82,7 +82,6 @@ namespace Lb2CirclePaint
             if (colorDialog2.ShowDialog() == DialogResult.OK)
             {
                 Color color = colorDialog2.Color;
-                label4.ForeColor = color;
                 brush = new SolidBrush(color);
             }
         }
