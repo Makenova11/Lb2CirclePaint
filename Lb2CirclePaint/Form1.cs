@@ -184,7 +184,7 @@ namespace Lb2CirclePaint
             pen.Width = Convert.ToInt32(textBox2.Text);
             //брезенхем
             brush = new SolidBrush(pen.Color);
-            Algoritm.BrCircle(g, brush, CirclePoint.X, CirclePoint.Y, radius / 2);
+            Algoritm.BrCircle(g, brush, CirclePoint.X+radius/2, CirclePoint.Y+radius/2, radius / 2);
             //брезенхем
             //g.DrawEllipse(pen, rectangle);
             pictureBox1.Refresh();
@@ -202,7 +202,7 @@ namespace Lb2CirclePaint
             //Удаление старого круга
             Size oldSize = new Size(oldradius, oldradius);
             Rectangle oldRectangle = new Rectangle(pointDelete, oldSize);
-            oldPen.Width = pen.Width+2;
+            oldPen.Width = pen.Width+3;
             g.DrawEllipse(oldPen, oldRectangle);
             g.FillEllipse(oldbrush, oldRectangle);
            

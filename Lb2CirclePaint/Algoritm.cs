@@ -37,7 +37,7 @@ namespace Lb2CirclePaint
                 y--;
             }
         }
-        //Метод, устанавливающий пиксел на форме с заданными цветом и прозрачностью
+        //Метод, устанавливающий пиксель на форме с заданными цветом и прозрачностью
         private static void PutPixel(Graphics g, Brush brush, int x, int y)
         {
             g.FillRectangle(brush, x, y, 1, 1);
